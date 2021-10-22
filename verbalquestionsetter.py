@@ -619,8 +619,6 @@ class UI:
 
     #Handle the answer to a question
     def answerHandler(self, question, wordstolookup, type):
-        
-        
         answerHandlingFrame = tk.Frame(self.startFrame)
         
         count = 1
@@ -691,7 +689,6 @@ class UI:
             "height":1,
             "font":(FONT, 15)
         }
-
         PopupWindow(self.startFrame, word.upper() + "\n\n" + formatDefinition(wordData.definition(word)), buttonSettings=buttonSettings, hoverButton=True).pack()
 
     #Set questions for the student to do
