@@ -181,7 +181,7 @@ class SequenceQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
         
     
     #View the question and its result after doing it
@@ -288,7 +288,7 @@ class SameLetterFourWordsQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -403,7 +403,7 @@ class WordInASentenceQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -509,7 +509,7 @@ class CompoundWordQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -683,7 +683,7 @@ class AlgebraSubstitutionQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -864,7 +864,7 @@ class MixTheWordsInTheSameWayQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -997,7 +997,7 @@ class ThreeLetterWordCompletesSentenceQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()    
+            self.displayWindows(*args, **kwargs)    
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -1199,7 +1199,7 @@ class MostOppositeInMeaningWordsQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -1405,7 +1405,7 @@ class MostNearInMeaningWordsQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -1514,7 +1514,7 @@ class SwitchTheLetterQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
@@ -1635,7 +1635,7 @@ class SumQuestion(Question):
         if useragent == ANDROID:
             self.displayAndroid()
         else:
-            self.displayWindows()
+            self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
     def view(self, parent):
