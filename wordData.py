@@ -112,7 +112,7 @@ class WordData:
     
     #Save the data
     def save(self):
-        with open("wordDatav2.bin", 'wb') as file:
+        with open("wordData.bin", 'wb') as file:
             pickle.dump(self, file)
 
     #Get a definition of a word in the set
