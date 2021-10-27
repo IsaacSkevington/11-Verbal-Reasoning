@@ -50,7 +50,7 @@ class Question:
         pass
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         pass
         
 
@@ -181,7 +181,7 @@ class SequenceQuestion(Question):
         
     
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In each question, find the number that continues the series in the most sensible way and write it in the box", font=(FONT, 13, "bold", "underline")).pack(padx=5, pady=5)
         tk.Label(parent, text=", ".join([str(s) for s in self.sequence]), font=(FONT, 12, "bold")).pack(padx=5, pady=5)
         optionsFrame = tk.Frame(parent)
@@ -287,7 +287,7 @@ class SameLetterFourWordsQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In this question, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets.").pack(padx=5, pady=5)
         tk.Label(parent, text=self.word1 + " [  ?  ] " + self.word2 + "    " + self.word3 + " [  ?  ] " + self.word4).pack(padx=5, pady=5)
         word1 = self.word1 + self.letter
@@ -402,7 +402,7 @@ class WordInASentenceQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these sentences, a word is hidden at the end of one word and the beginning of the next word.\nWrite the hidden word in the box below", font=(FONT, 13, "bold", "underline")).pack(padx=5, pady=5)
         tk.Label(parent, text=self.sentence).pack(padx=5, pady=5)
         tk.Label(parent, text="Options:").pack(padx=5, pady=5)
@@ -508,7 +508,7 @@ class CompoundWordQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters.\nThe word from the first group always comes first.\nWrite the word you make in the answer box").pack(padx=5, pady=5)
         tk.Label(parent, text="Options:").pack(padx=5, pady=5)
         optionsFrame = tk.Frame(parent)
@@ -682,7 +682,7 @@ class AlgebraSubstitutionQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these questions, letters stand for numbers.\nWork out the answer to each sum, then find its letter and write it in the box.").pack(padx=5, pady=5)
         n = list(self.numberMap.keys())
         nm = self.numberMap
@@ -863,7 +863,7 @@ class MixTheWordsInTheSameWayQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these questions, the three words in the second group should go together in the same way as the three in the first group.").pack(padx=5, pady=5)
         tk.Label(parent, text=self.word1 + " [" + self.word12Combine + "] " + self.word2 + "    " + self.word3 + " [  ?  ] " + self.word4).pack(padx=5, pady=5)
         tk.Label(parent, text="Answer is '" + self.correctAnswer + "'").pack(padx=5, pady=5)
@@ -996,7 +996,7 @@ class ThreeLetterWordCompletesSentenceQuestion(Question):
             self.displayWindows(*args, **kwargs)    
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these sentences, the word in capitals has had three letters next to each other taken out.\nThese three letters will make one correctly-spelt word without changing their order.\nThe sentence that you make must make sense.").pack(padx=5, pady=5)
         tk.Label(parent, text=self.sentence).pack(padx=5, pady=5)
         tk.Label(parent, text="Options:").pack(padx=5, pady=5)
@@ -1198,7 +1198,7 @@ class MostOppositeInMeaningWordsQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these questions, find two words, one from each group, that are most opposite in meaning.").pack(padx=5, pady=5)
         wordFrame = tk.Frame(parent)
         count = 0
@@ -1404,7 +1404,7 @@ class MostNearInMeaningWordsQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In these questions, find two words, one from each group, that are most similar in meaning.").pack(padx=5, pady=5)
         wordFrame = tk.Frame(parent)
         count = 0
@@ -1513,7 +1513,7 @@ class SwitchTheLetterQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In this question, one letter can be moved from the first word to the second word to make two new words.").pack(padx=5, pady=5)
         tk.Label(parent, text=self.word1 + "    " + self.word2).pack(padx=5, pady=5)
         tk.Label(parent, text="Answer of '" + self.correctAnswer + "' gives the words '" + self.newWord1 + "' and '" + self.newWord2 + "'").pack(padx=5, pady=5)
@@ -1634,7 +1634,7 @@ class SumQuestion(Question):
             self.displayWindows(*args, **kwargs)
 
     #View the question and its result after doing it
-    def view(self, parent):
+    def view(self, useragent, parent):
         tk.Label(parent, text = "In each question, find the number that will complete the sum correctly and write it in the box.", font=(FONT, 13, "underline", "bold")).pack(padx=5, pady=5)
         tk.Label(parent, text=self.lhs + " = " + self.rhs, font=(FONT, 12)).pack(padx=5, pady=5)
         tk.Label(parent, text="Answer of '" + str(self.correctAnswer) + "' makes both sides equal to " + str(self.lrhsanswer)).pack(padx=5, pady=5)
