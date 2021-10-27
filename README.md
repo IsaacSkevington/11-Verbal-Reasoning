@@ -1,4 +1,4 @@
-# 11-Verbal-Reasoning
+# 11+ Verbal Reasoning Helper
 A program to help children aged 9-11 improve their verbal reasoning skills
 
 # Downloading
