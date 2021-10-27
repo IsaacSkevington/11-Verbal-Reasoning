@@ -4,10 +4,10 @@
 block_cipher = None
 
 
-a = Analysis(['verbalquestionsetter.py'],
+a = Analysis(['main.py'],
              pathex=['D:\\Users\\SSAPP\\Documents\\code\\Python\\Tim Verbal'],
              binaries=[],
-             datas=[('wordData.bin', '.'), ('allwords.bin', '.'), ('commonwords.bin', '.'), ('11+Logo.ico', '.')],
+             datas=[('Data/wordData.bin', './Data'), ('Data/allwords.bin', './Data'), ('Data/commonwords.bin', './Data'), ('Data/11+Logo.ico', './Data')],
              hiddenimports=[],
              hookspath=[],
              runtime_hooks=[],
@@ -29,7 +29,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          icon='11+Logo.ico',
+          icon='Data/11+Logo.ico',
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False)

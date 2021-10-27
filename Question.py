@@ -1,7 +1,3 @@
-from UserData import UserData
-from typing import final
-
-from nltk.grammar import Nonterminal
 from wordData import *
 from tkExtensions import *
 from sequenceGenerator import SequenceGenerator

@@ -1,6 +1,4 @@
 from PyDictionary import PyDictionary
-import datetime
-import os.path
 import nltk
 from nltk import text
 from nltk.corpus.reader.tagged import MacMorphoCorpusReader
@@ -11,8 +9,6 @@ except:
     nltk.download('wordnet')
     from nltk.corpus import wordnet
 import pickle
-import tkinter as tk
-import tkinter.ttk as ttk
 import threading
 from tkExtensions import*
 dictionary=PyDictionary()
@@ -112,7 +108,7 @@ class WordData:
     
     #Save the data
     def save(self):
-        with open("wordData.bin", 'wb') as file:
+        with open("Data\\wordData.bin", 'wb') as file:
             pickle.dump(self, file)
 
     #Get a definition of a word in the set
@@ -240,7 +236,7 @@ def getWords(filename):
 
 #Get the word data from the default file
 def loadWordData():
-    with open(resourcePath("wordData.bin"), 'rb') as file:
+    with open(resourcePath("Data\\wordData.bin"), 'rb') as file:
         return pickle.load(file)
 
 

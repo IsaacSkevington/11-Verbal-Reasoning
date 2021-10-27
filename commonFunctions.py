@@ -1,13 +1,7 @@
-
-
-from hashlib import new
 import random
 import pickle
 import re
 import nltk
-from PyDictionary import PyDictionary
-from nltk import text
-from nltk.corpus.reader.tagged import MacMorphoCorpusReader
 import sys
 import os
 
@@ -29,8 +23,8 @@ def resourcePath(relative_path):
     return os.path.join(os.path.abspath("."), relative_path)
 
 #Get the word list and dictionary
-words = getWords(resourcePath("commonwords.bin"))
-allwords = getWords(resourcePath("allwords.bin"))
+words = getWords(resourcePath("Data\\commonwords.bin"))
+allwords = getWords(resourcePath("Data\\allwords.bin"))
 wordDict = {}
 for word in words:
     wordDict[word] = ""
